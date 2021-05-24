@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <h1>Details</h1>
+    <form>
+        <label for="firstName">First Name:</label><br>
+        <input type="text" class="firstName" name="firstName"><br>
+        <label for="middleName">Middle Name:</label><br>
+        <input type="text" class="middleName" name="middleName"><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" class="lastName" name="lastName"><br>
+        <label for="mobileNumber">Mobile Number:</label><br>
+        <input type="text" class="mobileNumber" name="mobileNumber"><br>
+        <label for="addharCard">Addhar card Number:</label><br>
+        <input type="text" class="addharCard" name="addharCard"><br>
+        <label for="email">Email id:</label><br>
+        <input type="text" class="email" name="email"><br>
+        <label for="address">Address</label><br>
+        <input type="text" class="address" name="address"><br>
+
+        <button class="formDetails">Submit</button>
+      
+        
+    </form>
+
+
+
+
+    <script>
+        const formDetails = document.querySelector('.formDetails');
+        let details = [];
+        function submitForm(e){
+            e.preventDefault();
+            let detail = {
+                firstName: document.querySelector('.firstName').value,
+                middleName: document.querySelector('.middleName').value,
+                lastName: document.querySelector('.lastName').value,
+                mobileNumber: document.querySelector('.mobileNumber').value,
+                addharCard: document.querySelector('.addharCard').value,
+                email: document.querySelector('.email').value,
+                address: document.querySelector('.address').value
+
+            };
+            details.push(detail);
+            document.forms[0].reset();
+            
+            console.log(details);
+            }
+        formDetails.addEventListener('click' , submitForm);
+
+    </script>
+</body>
+</html>
