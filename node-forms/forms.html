@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Details</h1>
-    <form>
+    <form class="container" method="post" action="/addname">
         <label for="firstName">First Name:</label><br>
         <input type="text" class="firstName" name="firstName"><br>
         <label for="middleName">Middle Name:</label><br>
@@ -22,7 +22,7 @@
         <input type="text" class="email" name="email"><br>
         <label for="address">Address</label><br>
         <input type="text" class="address" name="address"><br>
-
+        <input type="submit" value="Add Name">
         <button class="formDetails">Submit</button>
       
         
@@ -32,8 +32,13 @@
 
 
     <script>
+
+        
+
         const formDetails = document.querySelector('.formDetails');
-        let details = [];
+        var obj = {
+            details: []
+        };
         function submitForm(e){
             e.preventDefault();
             let detail = {
@@ -46,11 +51,13 @@
                 address: document.querySelector('.address').value
 
             };
-            details.push(detail);
+            obj.details.push(detail);
             document.forms[0].reset();
+            console.log(obj.details);
+
             
-            console.log(details);
-            }
+
+    }
         formDetails.addEventListener('click' , submitForm);
 
     </script>
