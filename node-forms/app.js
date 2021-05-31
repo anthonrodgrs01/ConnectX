@@ -9,14 +9,14 @@ config ={
     useUnifiedTopology: true
 
 }
-mongoose.connect("mongodb+srv://kingSlayer:@Desmond01@cluster0.es2ug.mongodb.net/Forms?retryWrites=true&w=majority",config);
+mongoose.connect("mongodb+srv://kingSlayer:@Desmond01@cluster0.es2ug.mongodb.net/detailsDb?retryWrites=true&w=majority",config);
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/forms.html");
    });
  
-app.listen(port, () => {
- console.log("Server listening on port " + port);
+app.listen(4000, () => {
+ console.log("Server listening on port " + 4000);
 });
 
 var nameSchema = new mongoose.Schema({
@@ -29,7 +29,7 @@ var nameSchema = new mongoose.Schema({
     address: String
    });
 
-var User = mongoose.model("User", nameSchema);
+var User = mongoose.model("Detail", nameSchema);
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
