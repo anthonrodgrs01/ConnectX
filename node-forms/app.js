@@ -20,9 +20,9 @@ app.listen(4000, () => {
 });
 
 var nameSchema = new mongoose.Schema({
-    firstName: String,
-    middleName: String,
-    lastName: String,
+    name: String,
+    needAndSupplier: String,
+    essentialItem: String,
     mobileNumber: String,
     addharCard: String,
     email: String,
@@ -34,14 +34,16 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post("/addname", (req, res) => {
+app.post("/", (req, res) => {
     var myData = new User(req.body);
     myData.save()
     .then(item => {
-    res.send("item saved to database");
+    // res.send("Item saved");
+    console.log('database saved');
     })
     .catch(err => {
-    res.status(400).send("unable to save to database");
+    console.log('database saved')
     });
+    res.redirect("http://localhost:3000")
    });
 

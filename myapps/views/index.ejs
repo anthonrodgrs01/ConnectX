@@ -10,11 +10,10 @@
     <table class="table">
       <thead>
         <tr>
-          <th>First Name</th>
-          <th>Middle Name</th>
-          <th>Last Name</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Item</th>
           <th>Mobile Number</th>
-          <th>Addhar Card</th>
           <th>Email</th>
           <th>Address</th>
         </tr>
@@ -22,11 +21,10 @@
       <% records.forEach(function(row){ %>
 
       <tr>
-        <td><%= row.firstName %></td>
-        <td><%= row.middleName %></td>
-        <td><%= row.lastName %></td>
+        <td><%= row.name %></td>
+        <td><%= row.needAndSupplier %></td>
+        <td><%= row.essentialItem %></td>
         <td><%= row.mobileNumber %></td>
-        <td><%= row.addharCard %></td>
         <td><%= row.email %></td>
         <td><%= row.address %></td>
 

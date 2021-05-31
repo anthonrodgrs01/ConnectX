@@ -7,9 +7,9 @@ mongoose.connect('mongodb+srv://kingSlayer:@Desmond01@cluster0.es2ug.mongodb.net
 var conn = mongoose.connection;
 
 var detailSchema = new mongoose.Schema({
-    firstName: String,
-    middleName: String,
-    lastName: String,
+    name: String,
+    needAndSupplier: String,
+    essentialItem: String,
     mobileNumber: String,
     addharCard: String,
     email: String,
