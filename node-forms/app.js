@@ -26,6 +26,9 @@ var nameSchema = new mongoose.Schema({
     mobileNumber: String,
     addharCard: String,
     email: String,
+    city: String,
+    state: String,
+    country: String,
     address: String
    });
 

@@ -1,0 +1,26 @@
+name: String,
+needAndSupplier: String,
+essentialItem: String,
+mobileNumber: String,
+addharCard: String,
+email: String,
+city: String,
+state: String,
+country: String,
+address: String
+
+if(err) throw err;
+    var arr = data.toArray();
+    var n = arr.length;
+    var results = arr.filter(entry => entry.essentialItem === entry[n-1].essentialItem);
+      console.log(results);
+
+mongoose.connect('mongodb+srv://kingSlayer:@Desmond01@cluster0.es2ug.mongodb.net/Forms?retryWrites=true&w=majority');
+
+set DEBUG=myapps
+node bin/www
+
+SET DEBUG=myapps2:* & npm start
+
+npm install express-generator -g
+express --view=ejs myapps2
