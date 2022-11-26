@@ -23,3 +23,10 @@ command: npm init
 10. Start the html index.html file and the project is ready
 
 Go to mongoDB sign in your account and restart the cluster
+
+
+Changes for database connection should be made in:
+-Node-forms, Node-forms2 : app.js
+-myapps, myapps2: modules>details.js
+
+Take the database link from mongodb click connect in mongoDB and paste the address
